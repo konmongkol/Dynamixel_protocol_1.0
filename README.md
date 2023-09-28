@@ -69,7 +69,7 @@ checksum : 215
 
 
 ### Send
-> ใช้ในการส่ง ฆำพรฟส ไปยัง Dynamixel
+> ใช้ในการส่ง Serial ไปยัง Dynamixel
 ```
 packet : [255, 255, 1, 5, 3, 30, 0, 1, 215]
 Rx_64.send(packet)
