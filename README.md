@@ -43,10 +43,34 @@ packet = Rx_64.create_packet(3,Parameter)
 ```
 
 ### Checksum
+> การที่จะใช้ function checksum นั้นจะต้องมี packet อยู่เเล้ว
 ```
 packet = [255, 255, 1, 5, 3, 30, 0, 1]
 Rx_64.checksum(packet)
 # return 215
 Rx_64.checksum(packet,1)
 # return [255, 255, 1, 5, 3, 30, 0, 1, 215]
+```
+
+### check
+> ใช้ในการเช็คว่า packet นี้มีอะไรบ้าง
+```
+packet = [255, 255, 1, 5, 3, 30, 0, 1]
+Rx_64.check(packet)
+# return 
+packet : [255, 255, 1, 5, 3, 30, 0, 1, 215]
+packet[0:2] : [255, 255]
+Id : 1
+lenght : 5
+Instruction : 3
+Parameter : [30, 0, 1]
+checksum : 215
+```
+
+
+### Send
+> ใช้ในการส่ง ฆำพรฟส ไปยัง Dynamixel
+```
+packet : [255, 255, 1, 5, 3, 30, 0, 1, 215]
+Rx_64.send(packet)
 ```

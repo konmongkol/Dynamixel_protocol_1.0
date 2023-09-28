@@ -41,7 +41,7 @@ class Dynamixel:
             print("Error : " + str(Read[4]))
             print("Parameter : " + str(binascii.hexlify((Read[5:len(Read)-1])).decode('utf-8')))
             print("checksum : " + str(Read[-1]))
-        return True
+        return Read
     def create_packet(self,Instruction:int,Parameters:list,set:int = 0,Debug:bool = 0) -> list:
         data = [0xFF,0xFF,np.uint8(self.Id)]
         data.append(np.uint8(len(Parameters)+2))
