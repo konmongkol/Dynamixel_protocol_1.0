@@ -42,7 +42,7 @@ class Dynamixel:
             print("Parameter : " + str(binascii.hexlify((Read[5:len(Read)-1])).decode('utf-8')))
             print("checksum : " + str(Read[-1]))
         return True
-    def create_protocol(self,Instruction:int,Parameters:list,set:int = 0,Debug:bool = 0) -> list:
+    def create_packet(self,Instruction:int,Parameters:list,set:int = 0,Debug:bool = 0) -> list:
         data = [0xFF,0xFF,np.uint8(self.Id)]
         data.append(np.uint8(len(Parameters)+2))
         data.append(np.uint8(Instruction))
