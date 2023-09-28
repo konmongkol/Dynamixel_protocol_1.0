@@ -28,9 +28,9 @@ Rx_64 = Dynamixel("Rx-64",1)
 > Port = COM4<br>
 > Baudrate = 56700<br>
 ```
-Rx.Serial("COM4",57600)
+Rx_64.Serial("COM4",57600)
 ```
-### Create Protocol
+### Create Packet
 > Instruction = 0x03(Write data)<br>
 > Parameter = [0x1E,0x00,0x01]<br>
 > 0x1E = Goal Position<br>
@@ -38,15 +38,15 @@ Rx.Serial("COM4",57600)
 > 0x01 = Highest byte<br>
 ```
 Parameter = [0x1E,0x00,0x01]
-packet = Rx.create_packet(3,Parameter)
+packet = Rx_64.create_packet(3,Parameter)
 # return [255, 255, 1, 5, 3, 30, 0, 1]
 ```
 
 ### Checksum
 ```
 packet = [255, 255, 1, 5, 3, 30, 0, 1]
-Rx.checksum(packet)
+Rx_64.checksum(packet)
 # return 215
-Rx.checksum(packet,1)
+Rx_64.checksum(packet,1)
 # return [255, 255, 1, 5, 3, 30, 0, 1, 215]
 ```
