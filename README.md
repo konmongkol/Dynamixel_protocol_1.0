@@ -3,7 +3,7 @@
 Protocol 1.0 : https://emanual.robotis.com/docs/en/dxl/protocol1/<br>
 Dynamixel RX-64 : https://emanual.robotis.com/docs/en/dxl/rx/rx-64/<br>
 โดย Git นี้จะสอนการใช้งาน Dynamixel กับ Python<br>
-<<<<<<< HEAD
+
 > งั้นมาเริ่มกันเลย อย่างเเรกเราต้อง _ดาวน์โหลด_ ไฟล์ Class_Dynamixel.py มาก่อน พอโหลดมาเสร็จ ก็สามารถใช้งานได้เลยโดยต้องสร้างไฟล์ที่จะใช้เเยกไว้ เเต่ต้องอยู่ใน path เดียวกับไฟล์ Class_Dynamixel
 
 ## ตัวอย่างการใช้งาน
