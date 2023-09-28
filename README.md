@@ -6,6 +6,11 @@ Dynamixel RX-64 : https://emanual.robotis.com/docs/en/dxl/rx/rx-64/<br>
 
 > งั้นมาเริ่มกันเลย อย่างเเรกเราต้อง _ดาวน์โหลด_ ไฟล์ Class_Dynamixel.py มาก่อน พอโหลดมาเสร็จ ก็สามารถใช้งานได้เลยโดยต้องสร้างไฟล์ที่จะใช้เเยกไว้ เเต่ต้องอยู่ใน path เดียวกับไฟล์ Class_Dynamixel.py
 
+## *_ดาวน์โหลด_*
+```
+git clone https://github.com/konmongkol/Dynamixel_protocol_1.0.git
+```
+
 ## ตัวอย่างการใช้งาน
 > การใช้งาน library
 ```
